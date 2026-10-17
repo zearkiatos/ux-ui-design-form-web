@@ -1,0 +1,13 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: ux-ui-design-form-web
+    environment:
+      - PORT=8080
+    volumes:
+      - "./src:/usr/share/nginx/html"
+    ports:
+      - "81:8080"
+    tty: true
